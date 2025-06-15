@@ -63,3 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(".card, .ujrf-section")
   animatedElements.forEach((el) => observer.observe(el))
 })
+
+ymaps.ready(init);
+
+function init() {
+  const map = new ymaps.Map("map", {
+    center: [41.330885, 69.304395], // Координаты Ташкента, можешь подставить свои
+    zoom: 14
+  });
+
+  const placemark = new ymaps.Placemark([41.330885, 69.304395], {
+    balloonContent: 'Мы тут!'
+  });
+
+  map.geoObjects.add(placemark);
+}
+
