@@ -1,0 +1,146 @@
+<!-- FOOTER для вставки в Tilda -->
+<div class="ujrf-footer">
+  <div class="ujrf-container">
+    <div class="ujrf-footer-content">
+      <div class="ujrf-footer-section">
+        <h4>Федерация</h4>
+        <ul>
+          <li><a href="about">О нас</a></li>
+          <li><a href="team">Команда</a></li>
+          <li><a href="documents">Документы</a></li>
+        </ul>
+      </div>
+      <div class="ujrf-footer-section">
+        <h4>Тренировки</h4>
+        <ul>
+          <li><a href="tariffs">Расписание и тарифы</a></li>
+          <li><a href="kids">Для детей</a></li>
+          <li><a href="adults">Для взрослых</a></li>
+        </ul>
+      </div>
+      <div class="ujrf-footer-section">
+        <h4>Контакты</h4>
+        <p>г.Ташкент, Мирзо-Улугбекский р-н, улица Аккурган 31</p>
+        <p>+998 95 940 07 07</p>
+        <p>jumprope@gmail.ru</p>
+      </div>
+      <div class="ujrf-footer-section">
+        <h4>Социальные сети</h4>
+        <div class="ujrf-footer-social">
+          <a href="#" class="ujrf-social-link">Telegram</a>
+          <a href="#" class="ujrf-social-link">Instagram</a>
+          <a href="#" class="ujrf-social-link">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="ujrf-footer-bottom">
+      <p>&copy; 2025 Jump Rope Uzbekistan. Все права защищены.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.ujrf-footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.ujrf-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ujrf-footer {
+  background: #005c5a;
+  color: #ffffff;
+  padding: 60px 0 20px;
+}
+
+.ujrf-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.ujrf-footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.ujrf-footer-section ul {
+  list-style: none;
+}
+
+.ujrf-footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.ujrf-footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.ujrf-footer-section a:hover {
+  opacity: 1;
+}
+
+.ujrf-footer-section p {
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.ujrf-footer-social {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.ujrf-social-link {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.ujrf-social-link:hover {
+  opacity: 1;
+}
+
+.ujrf-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Принудительные стили для всех ссылок в футере */
+.ujrf-footer a,
+.ujrf-footer a:link,
+.ujrf-footer a:visited,
+.ujrf-footer a:hover,
+.ujrf-footer a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  opacity: 0.8;
+}
+
+.ujrf-footer a:hover {
+  opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+  .ujrf-footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+</style>

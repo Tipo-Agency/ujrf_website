@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифы и расписание - Jump Rope Uzbekistan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ujrf-navbar">
+        <div class="container">
+            <a class="navbar-brand ujrf-logo-text" href="index.html">UJRF</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Федерация
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">О нас</a></li>
+                            <li><a class="dropdown-item" href="team.html">Команда</a></li>
+                            <li><a class="dropdown-item" href="documents.html">Документы</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Тренировки
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tariffs.html">Расписание и тарифы</a></li>
+                            <li><a class="dropdown-item" href="trial.html">Пробное занятие</a></li>
+                            <li><a class="dropdown-item" href="kids.html">Для детей</a></li>
+                            <li><a class="dropdown-item" href="adults.html">Для взрослых</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Турниры
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="calendar.html">Календарь событий</a></li>
+                            <li><a class="dropdown-item" href="results.html">Результаты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Магазин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="ujrf-social-links d-none d-lg-flex">
+                    <a href="#"><i class="bi bi-telegram"></i></a>
+                    <a href="https://www.instagram.com/fjruzb/"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="ujrf-page-header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1>Тарифы и расписание</h1>
+                    <p>
+                        Выберите подходящий формат тренировок и начните заниматься уже сегодня.
+                        Мы предлагаем различные форматы тренировок для детей и взрослых.
+                        Вы можете выбрать разовые занятия, абонементы или персональные тренировки.
+                        Все занятия проводятся сертифицированными тренерами в специально оборудованных залах.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tariffs -->
+    <section class="ujrf-section ujrf-section-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-ujrf-primary">Тарифы</h2>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills nav-fill mb-5" id="tariffTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="ujrf-tab-btn active" id="kids-tab" data-bs-toggle="pill" data-bs-target="#kids"
+                        type="button" role="tab">
+                        Для детей
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="ujrf-tab-btn" id="adults-tab" data-bs-toggle="pill" data-bs-target="#adults"
+                        type="button" role="tab">
+                        Для взрослых
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="ujrf-tab-btn" id="personal-tab" data-bs-toggle="pill" data-bs-target="#personal"
+                        type="button" role="tab">
+                        Персональные
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="tariffTabsContent">
+                <!-- Kids Tariffs -->
+                <div class="tab-pane fade show active" id="kids" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Пробный</h4>
+                                        <div class="ujrf-price mt-3">Бесплатно</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4 text-start px-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>1
+                                            занаятие</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Знакомство с
+                                            тренером</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Определение
+                                            уровня</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Рекомендации
+                                            по тренировкам</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Базовый</h4>
+                                        <div class="ujrf-price mt-3">400 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>8
+                                            занятий в месяц</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>2
+                                            раза в неделю</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Групповые
+                                            тренировки</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Доступ к
+                                            общему чату</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Стандарт</h4>
+                                        <div class="ujrf-price mt-3">600 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>12 занятий
+                                            в месяц</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>3
+                                            раза в
+                                            неделю</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Групповые
+                                            тренировки</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Видео-разборы
+                                            техники</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Участие в
+                                            мероприятиях</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Премиум</h4>
+                                        <div class="ujrf-price mt-3">800 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>16 занятий
+                                            в месяц</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>4
+                                            раза в
+                                            неделю</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Групповые
+                                            тренировки</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>2
+                                            персональные тренировки</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Участие в
+                                            соревнованиях</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Скакалка в
+                                            подарок</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adults Tariffs -->
+                <div class="tab-pane fade" id="adults" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Пробный</h4>
+                                        <div class="ujrf-price mt-3">Бесплатно</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>1
+                                            занаятие</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Знакомство с
+                                            тренером</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Определение
+                                            уровня</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Рекомендации
+                                            по тренировкам</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Базовый</h4>
+                                        <div class="ujrf-price mt-3">500 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>8
+                                            занятий в месяц</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>2
+                                            раза в неделю</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Групповые
+                                            тренировки</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Доступ к
+                                            онлайн-материалам</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Стандарт</h4>
+                                        <div class="ujrf-price mt-3">700 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>12 занятий
+                                            в месяц</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>3
+                                            раза в
+                                            неделю</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Групповые
+                                            тренировки</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Персональный
+                                            план тренировок</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Консультации
+                                            по питанию</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Премиум</h4>
+                                        <div class="ujrf-price mt-3">900 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>16 занятий
+                                            в месяц</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>4
+                                            раза в
+                                            неделю</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Групповые
+                                            тренировки</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>2
+                                            персональные тренировки</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Индивидуальный
+                                            план питания</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Профессиональная
+                                            скакалка</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Tariffs -->
+                <div class="tab-pane fade" id="personal" role="tabpanel">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Разовая тренировка</h4>
+                                        <div class="ujrf-price mt-3">150 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>60 минут</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Индивидуальный
+                                            подход</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Работа над
+                                            техникой</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Рекомендации
+                                            по тренировкам</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Пакет 5 тренировок</h4>
+                                        <div class="ujrf-price mt-3">650 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>5
+                                            тренировок по 60 минут</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Персональный
+                                            план</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Видео-анализ
+                                            техники</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Домашние
+                                            задания</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card ujrf-popular card-tarrifs">
+                                <div class="text-center">
+                                    <div class="bg-ujrf-primary text-white mb-3 p-3">
+                                        <h4 class="card-title text-ujrf-white">Пакет 10 тренировок</h4>
+                                        <div class="ujrf-price mt-3">1 200 000 сум</div>
+                                    </div>
+                                    <ul class="list-unstyled mb-4 text-start px-4">
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>10 тренировок
+                                            по 60 минут</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Персональный
+                                            план</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Видео-анализ
+                                            техники</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Домашние
+                                            задания</li>
+                                        <li class="mb-2"><i
+                                                class="bi bi-check-circle-fill text-ujrf-primary me-2"></i>Консультация
+                                            по питанию</li>
+                                    </ul>
+                                </div>
+                                <a href="trial.html" class="btn btn-ujrf-primary mt-auto m-3">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Schedule Section -->
+    <section class="ujrf-section ujrf-section-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-ujrf-primary">Расписание занятий</h2>
+                    <p class="lead mb-2">Выберите удобное время для тренировок</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="ujrf-schedule-tabs">
+                        <ul class="nav nav-tabs ujrf-schedule-nav mb-4" id="scheduleTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="kids-schedule-tab" data-bs-toggle="tab"
+                                    data-bs-target="#kids-schedule" type="button" role="tab"
+                                    aria-controls="kids-schedule" aria-selected="true">Для детей</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="adults-schedule-tab" data-bs-toggle="tab"
+                                    data-bs-target="#adults-schedule" type="button" role="tab"
+                                    aria-controls="adults-schedule" aria-selected="false">Для взрослых</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="scheduleTabContent">
+                            <!-- Kids Schedule -->
+                            <div class="tab-pane fade show active" id="kids-schedule" role="tabpanel"
+                                aria-labelledby="kids-schedule-tab">
+                                <div class="ujrf-schedule-table">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover ujrf-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="bg-ujrf-primary text-white">Время</th>
+                                                    <th class="bg-ujrf-primary text-white">Понедельник</th>
+                                                    <th class="bg-ujrf-primary text-white">Вторник</th>
+                                                    <th class="bg-ujrf-primary text-white">Среда</th>
+                                                    <th class="bg-ujrf-primary text-white">Четверг</th>
+                                                    <th class="bg-ujrf-primary text-white">Пятница</th>
+                                                    <th class="bg-ujrf-primary text-white">Суббота</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fw-bold">16:00-17:00</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 5-7 лет</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 5-7 лет</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 5-7 лет</span></td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">17:00-18:30</td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 8-12 лет</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 8-12 лет</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 8-12 лет</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">18:30-20:00</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 13-16 лет</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 13-16 лет</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Группа 13-16 лет</span></td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Adults Schedule -->
+                            <div class="tab-pane fade" id="adults-schedule" role="tabpanel"
+                                aria-labelledby="adults-schedule-tab">
+                                <div class="ujrf-schedule-table">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover ujrf-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="bg-ujrf-primary text-white">Время</th>
+                                                    <th class="bg-ujrf-primary text-white">Понедельник</th>
+                                                    <th class="bg-ujrf-primary text-white">Вторник</th>
+                                                    <th class="bg-ujrf-primary text-white">Среда</th>
+                                                    <th class="bg-ujrf-primary text-white">Четверг</th>
+                                                    <th class="bg-ujrf-primary text-white">Пятница</th>
+                                                    <th class="bg-ujrf-primary text-white">Суббота</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fw-bold">7:00-8:00</td>
+                                                    <td><span class="ujrf-schedule-item">Утренний интенсив</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Утренний интенсив</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Утренний интенсив</span></td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">12:00-13:00</td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Обеденный фитнес</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Обеденный фитнес</span></td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">19:00-20:30</td>
+                                                    <td><span class="ujrf-schedule-item">Базовый курс</span></td>
+                                                    <td><span class="ujrf-schedule-item">Фристайл</span></td>
+                                                    <td><span class="ujrf-schedule-item">Базовый курс</span></td>
+                                                    <td><span class="ujrf-schedule-item">Фристайл</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Интенсив</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">20:30-22:00</td>
+                                                    <td><span class="ujrf-schedule-item">Интенсив</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Интенсив</span></td>
+                                                    <td>-</td>
+                                                    <td><span class="ujrf-schedule-item">Фристайл</span></td>
+                                                    <td>-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="ujrf-section ujrf-section-light text-ujrf-primary">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-6 fw-bold mb-4">Остались вопросы?</h2>
+                    <p class="lead mb-4">Свяжитесь с нами, и мы поможем выбрать подходящий тариф и время для тренировок
+                    </p>
+                    <a href="contacts.html" class="btn btn-ujrf-primary btn-lg mb-4">Связаться с нами</a>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+998 95 940 07 07</p>
+                            <p class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>г.Ташкент, Мирзо-Улугбекский р-н, улица Аккурган 31</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ujrf-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5>Федерация</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="team.html">Команда</a></li>
+                        <li><a href="documents.html">Документы</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Тренировки</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tariffs.html">Расписание и тарифы</a></li>
+                        <li><a href="kids.html">Для детей</a></li>
+                        <li><a href="adults.html">Для взрослых</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Контакты</h5>
+                    <ul class="list-unstyled">
+                    <li class="mb-1"><a href="https://yandex.uz/maps/10335/tashkent/house/YkAYdQdkSkwCQFprfX9ycXRrYQ==/?ll=69.304396%2C41.330885&z=16"><i class="bi bi-geo-alt-fill me-2"></i>г.Ташкент, Мирзо-Улугбекский р-н, улица Аккурган 31</a></li>
+                    <li class="mb-1"><a href="tel:+998959400707"><i class="bi bi-telephone-fill"></i> +998 95 940 07 07</a></li>
+                    <li class="mb-0"><a href="mailto:jumprope@gmail.com"><i class="bi bi-envelope-fill"></i> jumprope@gmail.ru</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Социальные сети</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#"><i class="bi bi-telegram" style="font-size: 1.5rem;"></i></a>
+                        <a href="#"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+                        <a href="#"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="ujrf-footer-bottom mt-4">
+                <p>&copy; 2025 Jump Rope Uzbekistan. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="common.js"></script>
+</body>
+
+</html>

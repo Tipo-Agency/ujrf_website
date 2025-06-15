@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Переопределение Bootstrap переменных */
+:root {
+  --bs-primary: #005c5a;
+  --bs-secondary: #9c2f2e;
+  --bs-success: #28a745;
+  --bs-info: #17a2b8;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #343a40;
+  --bs-font-family-sans-serif: "Inter", sans-serif;
+}
+
+/* Общие стили */
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  padding-top: 76px; /* Отступ для фиксированного navbar */
+  background-color: #f8f9fa;
+}
+
+/* Кастомные цвета */
+.bg-ujrf-primary {
+  background-color: #005c5a !important;
+}
+
+.bg-ujrf-secondary {
+  background-color: #9c2f2e !important;
+}
+
+.text-ujrf-primary {
+  color: #005c5a !important;
+}
+
+.text-ujrf-secondary {
+  color: #9c2f2e !important;
+}
+
+.btn-ujrf-primary {
+  background-color: transparent;
+  border-color: #005c5a;
+  color: #005c5a;
+  border: #005c5a 2px solid;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 7px 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ujrf-primary:hover {
+  background-color: #005c5a;
+  border-color: #005c5a;
+  color: #ffffff;
+}
+
+.btn-ujrf-secondary {
+  background-color: #9c2f2e;
+  border-color: #9c2f2e;
+  color: #ffffff;
+}
+
+.btn-ujrf-secondary:hover {
+  background-color: #9c2f2e;
+  border-color: #9c2f2e;
+  color: #ffffff;
+}
+
+/* Header/Navbar стили */
+.ujrf-navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ujrf-logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #005c5a;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.ujrf-logo-text:hover {
+  color: #007a77;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #4b4b4b !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #005c5a !important;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.dropdown-item {
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #005c5a;
+  transform: translateX(5px);
+}
+
+/* Page Header стили */
+.ujrf-page-header {
+  background-color: #f8f9fa;
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.ujrf-page-header h1 {
+  font-size: 3rem;
+  color: #005c5a;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.ujrf-page-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Hero Section */
+.ujrf-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ujrf-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.ujrf-hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ujrf-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 92, 91, 0.439);
+  z-index: -1;
+}
+
+.ujrf-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.ujrf-hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* Card стили */
+.ujrf-card {
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Уменьшение внутреннего отступа */
+  border-radius: 8px; /* Уменьшение радиуса скругления */
+}
+
+
+.ujrf-card .card-body {
+  padding: 15px; /* Уменьшение внутреннего отступа тела карточки */
+}
+
+.ujrf-feature-icon {
+  font-size: 3rem;
+  color: #005c5a;
+  margin-bottom: 20px;
+}
+
+/* Footer стили */
+.ujrf-footer {
+  background-color: #005c5a;
+  color: #ffffff;
+  padding: 60px 0 20px;
+}
+
+.ujrf-footer h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.ujrf-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.ujrf-footer a:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.ujrf-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Форма стили */
+.form-control:focus {
+  border-color: #005c5a;
+  box-shadow: 0 0 0 0.2rem rgba(0, 92, 90, 0.25);
+}
+
+.form-select:focus {
+  border-color: #005c5a;
+  box-shadow: 0 0 0 0.2rem rgba(0, 92, 90, 0.25);
+}
+
+/* Специальные секции */
+.ujrf-section {
+  padding: 80px 0;
+}
+
+.ujrf-section-light {
+  background-color: #f8f9fa;
+}
+
+/* Иконки */
+.ujrf-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Цены */
+.ujrf-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Популярный тариф */
+.ujrf-popular {
+  border: 3px solid #005c5a;
+  position: relative;
+  z-index: 3;
+}
+
+.ujrf-popular-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #005c5a;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* Социальные сети */
+.ujrf-social-links a {
+  color: #4b4b4b;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.ujrf-social-links a:hover {
+  color: #005c5a;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .ujrf-page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .ujrf-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .ujrf-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .ujrf-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ujrf-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .ujrf-hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Анимации */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Принудительные стили для ссылок */
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+/* Кастомные утилиты */
+.text-muted-light {
+  color: #6c757d !important;
+}
+
+.shadow-custom {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rounded-custom {
+  border-radius: 12px !important;
+}
+
+.border-ujrf-primary {
+  border-color: #005c5a !important;
+}
+
+.border-ujrf-secondary {
+  border-color: #9c2f2e !important;
+}
+
+
+.ujrf-tab-btn {
+  background: none;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4b4b4b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+ujrf-tab-btn.active {
+  color: #005c5a;
+}
+
+.ujrf-tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #005c5a;
+}
+
+
+/* ========================================
+   ТАБЛИЦЫ
+======================================== */
+
+.table {
+  color: var(--text-primary);
+}
+
+.table-primary {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-200);
+}
+
+.table-primary th {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+  border-color: var(--color-primary-200);
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--color-warm-100);
+}
+
+
+/* ========================================
+   РАСПИСАНИЕ ЗАНЯТИЙ
+======================================== */
+
+.ujrf-schedule-nav {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.ujrf-schedule-nav .nav-link {
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  margin-right: 1rem;
+}
+
+.ujrf-schedule-nav .nav-link:hover {
+  color: #005c5a;
+  border-bottom-color: rgba(0, 92, 90, 0.3);
+}
+
+.ujrf-schedule-nav .nav-link.active {
+  color: #005c5a;
+  border-bottom-color: #005c5a;
+  background-color: transparent;
+}
+
+.ujrf-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.ujrf-table thead {
+  background-color: rgba(0, 92, 90, 0.05);
+}
+
+.ujrf-table th {
+  font-weight: 600;
+  color: #005c5a;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 92, 90, 0.1);
+}
+
+.ujrf-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.ujrf-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ujrf-table tbody tr:hover {
+  background-color: rgba(0, 92, 90, 0.03);
+}
+
+.ujrf-schedule-item {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background-color: rgba(0, 92, 90, 0.08);
+  color: #005c5a;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.ujrf-schedule-item:hover {
+  background-color: rgba(0, 92, 90, 0.15);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .ujrf-schedule-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .ujrf-table th,
+  .ujrf-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .ujrf-schedule-item {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+.schedule-text {
+  color: #005c5a;
+  background-color: #005c5b48;
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.card-tarrifs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
