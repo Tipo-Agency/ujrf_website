@@ -115,7 +115,41 @@
 
 
   <!-- Products Grid -->
+  <style>
+    .ujrf-product-img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 0.5rem 0.5rem 0 0;
+      display: block;
+    }
+  </style>
   <section class="ujrf-section ujrf-section-light">
+    <style>
+      .ujrf-card .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 0;
+      }
+      .ujrf-card .ujrf-product-footer {
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .ujrf-card .ujrf-price {
+        margin-bottom: 0 !important;
+      }
+      .ujrf-card .btn-ujrf-primary {
+        margin-top: 0 !important;
+        white-space: nowrap;
+      }
+    </style>
     <div class="container">
       <div class="row g-4">
         <div class="col-12 text-center mb-5">
@@ -123,99 +157,133 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Скакалка Speed Pro" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Скакалка Speed Pro</h5>
-              <p class="card-text">Профессиональная скакалка для скоростных дисциплин. Регулируемая длина, подшипники в
-                ручках.</p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">120 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
+            <img src="images/rope_1.jpeg"
+              class="card-img-top ujrf-product-img" alt="Double Dutch (Дабл Датч)">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+              <h5 class="card-title text-ujrf-primary">Double Dutch (Дабл Датч)</h5>
+              <ul class="text-start mb-2" style="font-size: 0.98rem; padding-left: 1.2em;">
+                <li><b>Описание:</b> Две длинные скакалки (обычно по 3,5–4 м), вращаемые двумя людьми, третий (или несколько) прыгает внутри.</li>
+                <li><b>Назначение:</b> командные соревнования, фристайл, акробатические элементы.</li>
+                <li><b>Характеристики:</b> длина 4 м, прочный трос, подходит для международных турниров и шоу-программ.</li>
+                <li><b>Преимущества:</b> развивает командную работу, ритм, синхронность и координацию.</li>
+              </ul>
+              <div class="alert alert-success py-1 px-2 mb-2" style="font-size:0.95rem;">
+                <b>Рекомендуем:</b> для Double Dutch, командных прыжков и тренировок синхронности!
+              </div>
+              <div class="ujrf-product-footer">
+                <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">200 000 сум</div>
+                <button class="btn btn-ujrf-primary">Купить</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Скакалка Freestyle" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Скакалка Freestyle</h5>
-              <p class="card-text">Идеальна для фристайла и трюков. Мягкие ручки, прочный трос, отличная балансировка.
-              </p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">85 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
+            <img src="images/rope_2.jpeg"
+              class="card-img-top ujrf-product-img" alt="PVC Training Rope (ПВХ-скакалка)">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+              <h5 class="card-title text-ujrf-primary">PVC Training Rope (ПВХ-скакалка)</h5>
+              <ul class="text-start mb-2" style="font-size: 0.98rem; padding-left: 1.2em;">
+                <li><b>Описание:</b> Классическая скакалка для базовой техники и разминки, подходит для всех возрастов.</li>
+                <li><b>Назначение:</b> освоение базовых прыжков, тренировки скорости, разминка.</li>
+                <li><b>Характеристики:</b> плотный ПВХ трос 5–6 мм, универсальная длина, простота в использовании.</li>
+                <li><b>Преимущества:</b> долговечность, подходит для школ, клубов и секций.</li>
+              </ul>
+              <div class="alert alert-success py-1 px-2 mb-2" style="font-size:0.95rem;">
+                <b>Рекомендуем:</b> для ежедневных тренировок и начинающих спортсменов!
+              </div>
+              <div class="ujrf-product-footer">
+                <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">150 000 сум</div>
+                <button class="btn btn-ujrf-primary">Купить</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Тренировочный коврик" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Тренировочный коврик</h5>
-              <p class="card-text">Специальный коврик для тренировок. Амортизирует удары, защищает суставы.</p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">150 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
+            <img src="images/rope_3.jpeg"
+              class="card-img-top ujrf-product-img" alt="Digital Jump Rope (Цифровая скакалка)">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+              <h5 class="card-title text-ujrf-primary">Digital Jump Rope (Цифровая скакалка)</h5>
+              <ul class="text-start mb-2" style="font-size: 0.98rem; padding-left: 1.2em;">
+                <li><b>Описание:</b> Современная скакалка с электронным счётчиком для контроля тренировок.</li>
+                <li><b>Назначение:</b> отслеживание повторов, калорий, времени, персональный прогресс.</li>
+                <li><b>Характеристики:</b> встроенный счётчик, возможна синхронизация с приложением, удобные ручки.</li>
+                <li><b>Преимущества:</b> мотивация к регулярным занятиям, удобно для самостоятельных тренировок.</li>
+              </ul>
+              <div class="alert alert-success py-1 px-2 mb-2" style="font-size:0.95rem;">
+                <b>Рекомендуем:</b> для тех, кто хочет отслеживать результаты и ставить новые цели!
+              </div>
+              <div class="ujrf-product-footer">
+                <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">600 000 сум</div>
+                <button class="btn btn-ujrf-primary">Купить</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Футболка UJRF" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Футболка UJRF</h5>
-              <p class="card-text">Официальная футболка сборной Узбекистана. Дышащая ткань, спортивный крой.</p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">95 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
+            <img src="images/rope_4.jpeg"
+              class="card-img-top ujrf-product-img" alt="Weighted Rope (Утяжелённая скакалка)">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+              <h5 class="card-title text-ujrf-primary">Weighted Rope (Утяжелённая скакалка)</h5>
+              <ul class="text-start mb-2" style="font-size: 0.98rem; padding-left: 1.2em;">
+                <li><b>Описание:</b> Скакалка с утяжелением для силовой выносливости и кардио с повышенной нагрузкой.</li>
+                <li><b>Назначение:</b> развитие силы, выносливости, подготовка к кроссфиту и боксу.</li>
+                <li><b>Характеристики:</b> вес в ручках или тросе (250 г – 1 кг), усиленная нагрузка на плечи и корпус.</li>
+                <li><b>Преимущества:</b> часто применяется в фитнесе и единоборствах, быстро развивает мышечную выносливость.</li>
+              </ul>
+              <div class="alert alert-success py-1 px-2 mb-2" style="font-size:0.95rem;">
+                <b>Рекомендуем:</b> для интенсивных тренировок и подготовки бойцов!
+              </div>
+              <div class="ujrf-product-footer">
+                <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">800 000 сум</div>
+                <button class="btn btn-ujrf-primary">Купить</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Набор для начинающих" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Набор для начинающих</h5>
-              <p class="card-text">Комплект: скакалка, инструкция, доступ к видео-урокам. Идеально для старта.</p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">65 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
+            <img src="images/rope_5.jpeg"
+              class="card-img-top ujrf-product-img" alt="Freestyle Beaded Rope (Фристайл скакалка с бусинами)">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+              <h5 class="card-title text-ujrf-primary">Freestyle Beaded Rope (Фристайл скакалка с бусинами)</h5>
+              <ul class="text-start mb-2" style="font-size: 0.98rem; padding-left: 1.2em;">
+                <li><b>Описание:</b> Скакалка с пластиковыми бусинами для трюков и фристайл-выступлений.</li>
+                <li><b>Назначение:</b> выполнение crosses, releases, multiples, творческие шоу-программы.</li>
+                <li><b>Характеристики:</b> бусины на нейлоновом тросе, лёгкий вес, устойчивость к запутыванию.</li>
+                <li><b>Преимущества:</b> чёткий ритм, идеальна для соревнований по фристайлу.</li>
+              </ul>
+              <div class="alert alert-success py-1 px-2 mb-2" style="font-size:0.95rem;">
+                <b>Рекомендуем:</b> для освоения сложных трюков и творческих номеров!
+              </div>
+              <div class="ujrf-product-footer">
+                <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">200 000 сум</div>
+                <button class="btn btn-ujrf-primary">Купить</button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Шорты спортивные" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Шорты спортивные</h5>
-              <p class="card-text">Лёгкие шорты для тренировок и соревнований. Эластичная ткань, удобная посадка.</p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">75 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Утяжелённая скакалка" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Утяжелённая скакалка</h5>
-              <p class="card-text">Для силовых тренировок. Утяжелённые ручки развивают мышцы рук и плеч.</p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">110 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card ujrf-card h-100">
-            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=250&h=250&fit=crop&crop=center"
-              class="card-img-top" alt="Кроссовки для скакалки" style="height: 200px; object-fit: cover;">
-            <div class="card-body text-center d-flex flex-column">
-              <h5 class="card-title text-ujrf-primary">Кроссовки для скакалки</h5>
-              <p class="card-text">Специальная обувь с усиленной подошвой. Отличное сцепление и амортизация.</p>
-              <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">280 000 сум</div>
-              <button class="btn btn-ujrf-primary mt-auto">Купить</button>
+            <img src="images/rope_6.jpeg"
+              class="card-img-top ujrf-product-img" alt="Speed Rope (Скоростная скакалка)">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+              <h5 class="card-title text-ujrf-primary">Speed Rope (Скоростная скакалка)</h5>
+              <ul class="text-start mb-2" style="font-size: 0.98rem; padding-left: 1.2em;">
+                <li><b>Описание:</b> Профессиональная скакалка для максимальной скорости и рекордных результатов.</li>
+                <li><b>Назначение:</b> двойные и тройные прыжки (Double Unders, Triple Unders), соревнования.</li>
+                <li><b>Характеристики:</b> тонкий металлический кабель (1.3–1.8 мм), подшипники, лёгкие эргономичные ручки.</li>
+                <li><b>Преимущества:</b> идеальна для чемпионатов мира (WJR, FISAC), развивает скорость и координацию.</li>
+              </ul>
+              <div class="alert alert-success py-1 px-2 mb-2" style="font-size:0.95rem;">
+                <b>Рекомендуем:</b> для профессиональных спортсменов и любителей скорости!
+              </div>
+              <div class="ujrf-product-footer">
+                <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">180 000 сум</div>
+                <button class="btn btn-ujrf-primary">Купить</button>
+              </div>
             </div>
           </div>
         </div>
@@ -292,32 +360,48 @@
   </section>
 
   <!-- Bestsellers -->
+  <style>
+    .ujrf-bestseller-card .ujrf-product-img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 0.5rem 0.5rem 0 0;
+      display: block;
+      margin-top: 20px;
+    }
+    .ujrf-bestseller-card img:not(.ujrf-product-img) {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 0.5rem 0.5rem 0 0;
+      display: block;
+    }
+  </style>
   <section class="ujrf-section-light">
     <div class="ujrf-container">
       <h2 class="display-5 fw-bold text-ujrf-primary text-center mb-5 mt-5">Хиты продаж</h2>
       <div class="ujrf-bestsellers-grid">
         <div class="ujrf-bestseller-card">
-          <div class="ujrf-popular-badge">ТОП ПРОДАЖ</div>
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop&crop=center"
-            alt="Скакалка Speed Pro">
-          <h3>Скакалка Speed Pro</h3>
-          <p class="ujrf-price text-ujrf-primary">120 000 сум</p>
+          <img class="card-img-top ujrf-product-img" src="images/rope_6.jpeg"
+            alt="Speed Rope (Скоростная скакалка)">
+          <h3>Speed Rope (Скоростная скакалка)</h3>
+          <p class="ujrf-price text-ujrf-primary">180 000 сум</p>
           <button class="btn btn-ujrf-primary">Купить</button>
         </div>
         <div class="ujrf-bestseller-card">
-          <div class="ujrf-popular-badge">НОВИНКА</div>
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop&crop=center"
-            alt="Набор для начинающих">
-          <h3>Набор для начинающих</h3>
-          <p class="ujrf-price text-ujrf-primary">65 000 сум</p>
+          <img class="ujrf-product-img" src="images/rope_5.jpeg"
+            alt="Freestyle Beaded Rope (Фристайл скакалка с бусинами)">
+          <h3>Freestyle Beaded Rope (Фристайл скакалка с бусинами)</h3>
+          <p class="ujrf-price text-ujrf-primary">200 000 сум</p>
           <button class="btn btn-ujrf-primary">Купить</button>
         </div>
         <div class="ujrf-bestseller-card">
-          <div class="ujrf-popular-badge">СКИДКА</div>
-          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=250&h=250&fit=crop&crop=center"
-            alt="Футболка UJRF">
-          <h3>Футболка UJRF</h3>
-          <p class="ujrf-price text-ujrf-primary">95 000 сум</p>
+          <img class="ujrf-product-img" src="images/rope_3.jpeg"
+            alt="Digital Jump Rope (Цифровая скакалка)">
+          <h3>Digital Jump Rope (Цифровая скакалка)</h3>
+          <p class="ujrf-price text-ujrf-primary">600 000 сум</p>
           <button class="btn btn-ujrf-primary">Купить</button>
         </div>
       </div>
@@ -350,14 +434,12 @@
               <label for="product">Товар*</label>
               <select id="product" required>
                 <option value="">Выберите товар</option>
-                <option value="speed-pro">Скакалка Speed Pro</option>
-                <option value="freestyle">Скакалка Freestyle</option>
-                <option value="mat">Тренировочный коврик</option>
-                <option value="tshirt">Футболка UJRF</option>
-                <option value="starter-kit">Набор для начинающих</option>
-                <option value="shorts">Шорты спортивные</option>
-                <option value="weighted">Утяжелённая скакалка</option>
-                <option value="shoes">Кроссовки для скакалки</option>
+                <option value="double-dutch">Double Dutch (Дабл Датч)</option>
+                <option value="pvc-training">PVC Training Rope (ПВХ-скакалка)</option>
+                <option value="digital">Digital Jump Rope (Цифровая скакалка)</option>
+                <option value="weighted">Weighted Rope (Утяжелённая скакалка)</option>
+                <option value="freestyle-beaded">Freestyle Beaded Rope (Фристайл скакалка с бусинами)</option>
+                <option value="speed">Speed Rope (Скоростная скакалка)</option>
               </select>
             </div>
           </div>
@@ -385,7 +467,7 @@
           <a href="tel:+998959400707" class="btn-ujrf-primary">
             <i class="bi bi-telephone-fill"></i> Позвонить
           </a>
-          <a href="" class="btn-ujrf-primary">
+          <a href="https://t.me/+998959400707" class="btn-ujrf-primary">
             <i class="bi bi-chat-fill"></i> Написать в Telegram
           </a>
           <a href="mailto:jumprope@gmail.ru" class="btn-ujrf-primary">
@@ -438,6 +520,21 @@
             </div>
         </div>
     </footer>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="orderModalLabel">Спасибо за заказ!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="bi bi-check-circle-fill text-success" style="font-size: 2.5rem;"></i>
+          <p class="mt-3 mb-0">Наш менеджер свяжется с вами в ближайшее время.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="common.js"></script>
@@ -923,35 +1020,3 @@
     }
   }
 </style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Product card interactions
-    const productCards = document.querySelectorAll(".ujrf-product-card, .ujrf-bestseller-card");
-
-    productCards.forEach(card => {
-      const buyButton = card.querySelector(".btn-ujrf-primary");
-      if (buyButton) {
-        buyButton.addEventListener("click", function () {
-          // Add to cart functionality would go here
-          const originalText = this.textContent;
-          this.textContent = "Добавлено!";
-
-          setTimeout(() => {
-            this.textContent = originalText;
-          }, 2000);
-        });
-      }
-    });
-
-    // Form submission
-    const orderForm = document.querySelector(".ujrf-order-form");
-    if (orderForm) {
-      orderForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        alert("Заказ отправлен! Наш менеджер свяжется с вами в ближайшее время.");
-        this.reset();
-      });
-    }
-  });
-</script>
