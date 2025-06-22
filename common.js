@@ -1,3 +1,39 @@
+// Функция для открытия модального окна заказа
+function openOrderModal(productName) {
+  const modal = new bootstrap.Modal(document.getElementById('orderModal'))
+  modal.show()
+  
+  // Автоматически выбираем товар в форме
+  setTimeout(() => {
+    const select = document.getElementById('product')
+    if (select && productName) {
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.trim().toLowerCase() === productName.toLowerCase()) {
+          select.selectedIndex = i
+          break
+        }
+      }
+    }
+  }, 300)
+}
+
+// Функция для открытия модального окна записи на тариф
+function openTariffModal(category, plan, price) {
+  const modal = new bootstrap.Modal(document.getElementById('tariffModal'))
+  modal.show()
+  
+  // Автоматически заполняем выбранный тариф
+  setTimeout(() => {
+    const categoryField = document.getElementById('tariffCategory')
+    const planField = document.getElementById('tariffPlan')
+    const priceField = document.getElementById('tariffPrice')
+    
+    if (categoryField) categoryField.value = category
+    if (planField) planField.value = plan
+    if (priceField) priceField.value = price
+  }, 300)
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Универсальная обработка всех форм
   const forms = document.querySelectorAll("form")
@@ -31,6 +67,21 @@ document.addEventListener("DOMContentLoaded", () => {
           (getVal('#comment') ? `<b>Комментарий:</b> ${getVal('#comment')}\n` : "")
         modalTitle = "Спасибо за заказ!"
         modalText = "Наш менеджер свяжется с вами в ближайшее время."
+      }
+      // Запись на тариф
+      else if (form.classList.contains("ujrf-tariff-form")) {
+        formType = "Запись на тариф"
+        message =
+          `<b>Новая заявка на запись с сайта UJRF</b>\n` +
+          `<b>Имя:</b> ${getVal('#tariffName')}\n` +
+          `<b>Телефон:</b> ${getVal('#tariffPhone')}\n` +
+          (getVal('#tariffEmail') ? `<b>Email:</b> ${getVal('#tariffEmail')}\n` : "") +
+          `<b>Категория:</b> ${getVal('#tariffCategory')}\n` +
+          `<b>Тариф:</b> ${getVal('#tariffPlan')}\n` +
+          `<b>Стоимость:</b> ${getVal('#tariffPrice')}\n` +
+          (getVal('#tariffComment') ? `<b>Комментарий:</b> ${getVal('#tariffComment')}\n` : "")
+        modalTitle = "Спасибо за заявку!"
+        modalText = "Наш менеджер свяжется с вами в ближайшее время для подтверждения записи."
       }
       // Пробное занятие
       else if (form.classList.contains("ujrf-trial-form")) {
@@ -98,18 +149,45 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         )
         // Показываем модальное окно Bootstrap (универсально)
-        let modalEl = document.getElementById('orderModal')
-        if (!modalEl) {
-          // Если модального окна нет — создаём его динамически
-          modalEl = document.createElement('div')
-          modalEl.innerHTML = `<div class='modal fade' id='orderModal' tabindex='-1' aria-labelledby='orderModalLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header border-0'><h5 class='modal-title w-100 text-center' id='orderModalLabel'></h5><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Закрыть'></button></div><div class='modal-body text-center'><i class='bi bi-check-circle-fill text-success' style='font-size: 2.5rem;'></i><p class='mt-3 mb-0'></p></div></div></div></div>`
-          document.body.appendChild(modalEl.firstChild)
-          modalEl = document.getElementById('orderModal')
+        let modalEl = null
+        if (formType === "Запись на тариф") {
+          modalEl = document.getElementById('tariffSuccessModal')
+          if (!modalEl) {
+            // Если модального окна нет — создаём его динамически
+            modalEl = document.createElement('div')
+            modalEl.innerHTML = `<div class='modal fade' id='tariffSuccessModal' tabindex='-1' aria-labelledby='tariffSuccessModalLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header border-0'><h5 class='modal-title w-100 text-center' id='tariffSuccessModalLabel'></h5><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Закрыть'></button></div><div class='modal-body text-center'><i class='bi bi-check-circle-fill text-success' style='font-size: 2.5rem;'></i><p class='mt-3 mb-0'></p></div></div></div></div>`
+            document.body.appendChild(modalEl.firstChild)
+            modalEl = document.getElementById('tariffSuccessModal')
+          }
+        } else {
+          modalEl = document.getElementById('orderSuccessModal')
+          if (!modalEl) {
+            // Если модального окна нет — создаём его динамически
+            modalEl = document.createElement('div')
+            modalEl.innerHTML = `<div class='modal fade' id='orderSuccessModal' tabindex='-1' aria-labelledby='orderSuccessModalLabel' aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header border-0'><h5 class='modal-title w-100 text-center' id='orderSuccessModalLabel'></h5><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Закрыть'></button></div><div class='modal-body text-center'><i class='bi bi-check-circle-fill text-success' style='font-size: 2.5rem;'></i><p class='mt-3 mb-0'></p></div></div></div></div>`
+            document.body.appendChild(modalEl.firstChild)
+            modalEl = document.getElementById('orderSuccessModal')
+          }
         }
+        
         modalEl.querySelector('.modal-title').textContent = modalTitle
         modalEl.querySelector('.modal-body p').textContent = modalText
         const modal = new bootstrap.Modal(modalEl)
         modal.show()
+        
+        // Закрываем модальные окна, если они открыты
+        if (formType === "Запись на тариф") {
+          const tariffModal = bootstrap.Modal.getInstance(document.getElementById('tariffModal'))
+          if (tariffModal) {
+            tariffModal.hide()
+          }
+        } else if (formType === "Форма заказа") {
+          const orderModal = bootstrap.Modal.getInstance(document.getElementById('orderModal'))
+          if (orderModal) {
+            orderModal.hide()
+          }
+        }
+        
         this.reset()
       } catch (err) {
         alert("Ошибка при отправке. Попробуйте ещё раз или свяжитесь с нами по телефону.")

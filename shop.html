@@ -29,7 +29,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="about.html">О нас</a></li>
-              <li><a class="dropdown-item" href="team.html">Команда</a></li>
+              <li><a class="dropdown-item" href="management.html">Руководство</a></li>
               <li><a class="dropdown-item" href="documents.html">Документы</a></li>
             </ul>
           </li>
@@ -173,7 +173,7 @@
               </div>
               <div class="ujrf-product-footer">
                 <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">200 000 сум</div>
-                <button class="btn btn-ujrf-primary">Купить</button>
+                <button class="btn btn-ujrf-primary" onclick="openOrderModal('Double Dutch (Дабл Датч)')">Купить</button>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@
               </div>
               <div class="ujrf-product-footer">
                 <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">150 000 сум</div>
-                <button class="btn btn-ujrf-primary">Купить</button>
+                <button class="btn btn-ujrf-primary" onclick="openOrderModal('PVC Training Rope (ПВХ-скакалка)')">Купить</button>
               </div>
             </div>
           </div>
@@ -217,7 +217,7 @@
               </div>
               <div class="ujrf-product-footer">
                 <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">600 000 сум</div>
-                <button class="btn btn-ujrf-primary">Купить</button>
+                <button class="btn btn-ujrf-primary" onclick="openOrderModal('Digital Jump Rope (Цифровая скакалка)')">Купить</button>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@
               </div>
               <div class="ujrf-product-footer">
                 <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">800 000 сум</div>
-                <button class="btn btn-ujrf-primary">Купить</button>
+                <button class="btn btn-ujrf-primary" onclick="openOrderModal('Weighted Rope (Утяжелённая скакалка)')">Купить</button>
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@
               </div>
               <div class="ujrf-product-footer">
                 <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">200 000 сум</div>
-                <button class="btn btn-ujrf-primary">Купить</button>
+                <button class="btn btn-ujrf-primary" onclick="openOrderModal('Freestyle Beaded Rope (Фристайл скакалка с бусинами)')">Купить</button>
               </div>
             </div>
           </div>
@@ -283,7 +283,7 @@
               </div>
               <div class="ujrf-product-footer">
                 <div class="ujrf-price text-ujrf-primary text-ujrf-primary mb-3">180 000 сум</div>
-                <button class="btn btn-ujrf-primary">Купить</button>
+                <button class="btn btn-ujrf-primary" onclick="openOrderModal('Speed Rope (Скоростная скакалка)')">Купить</button>
               </div>
             </div>
           </div>
@@ -389,71 +389,22 @@
             alt="Speed Rope (Скоростная скакалка)">
           <h3>Speed Rope (Скоростная скакалка)</h3>
           <p class="ujrf-price text-ujrf-primary">180 000 сум</p>
-          <button class="btn btn-ujrf-primary">Купить</button>
+          <button class="btn btn-ujrf-primary" onclick="openOrderModal('Speed Rope (Скоростная скакалка)')">Купить</button>
         </div>
         <div class="ujrf-bestseller-card">
           <img class="ujrf-product-img" src="images/rope_5.jpeg"
             alt="Freestyle Beaded Rope (Фристайл скакалка с бусинами)">
           <h3>Freestyle Beaded Rope (Фристайл скакалка с бусинами)</h3>
           <p class="ujrf-price text-ujrf-primary">200 000 сум</p>
-          <button class="btn btn-ujrf-primary">Купить</button>
+          <button class="btn btn-ujrf-primary" onclick="openOrderModal('Freestyle Beaded Rope (Фристайл скакалка с бусинами)')">Купить</button>
         </div>
         <div class="ujrf-bestseller-card">
           <img class="ujrf-product-img" src="images/rope_3.jpeg"
             alt="Digital Jump Rope (Цифровая скакалка)">
           <h3>Digital Jump Rope (Цифровая скакалка)</h3>
           <p class="ujrf-price text-ujrf-primary">600 000 сум</p>
-          <button class="btn btn-ujrf-primary">Купить</button>
+          <button class="btn btn-ujrf-primary" onclick="openOrderModal('Digital Jump Rope (Цифровая скакалка)')">Купить</button>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Order Form -->
-  <section class="ujrf-section-light">
-    <div class="ujrf-container">
-      <div class="ujrf-order-form-wrapper">
-        <h2>Оформить заказ</h2>
-        <p>Заполните форму, и наш менеджер свяжется с вами для подтверждения заказа</p>
-        <form class="ujrf-order-form">
-          <div class="ujrf-form-row">
-            <div class="ujrf-form-group">
-              <label for="name">Ваше имя*</label>
-              <input type="text" id="name" required>
-            </div>
-            <div class="ujrf-form-group">
-              <label for="phone">Телефон*</label>
-              <input type="tel" id="phone" required>
-            </div>
-          </div>
-          <div class="ujrf-form-row">
-            <div class="ujrf-form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email">
-            </div>
-            <div class="ujrf-form-group">
-              <label for="product">Товар*</label>
-              <select id="product" required>
-                <option value="">Выберите товар</option>
-                <option value="double-dutch">Double Dutch (Дабл Датч)</option>
-                <option value="pvc-training">PVC Training Rope (ПВХ-скакалка)</option>
-                <option value="digital">Digital Jump Rope (Цифровая скакалка)</option>
-                <option value="weighted">Weighted Rope (Утяжелённая скакалка)</option>
-                <option value="freestyle-beaded">Freestyle Beaded Rope (Фристайл скакалка с бусинами)</option>
-                <option value="speed">Speed Rope (Скоростная скакалка)</option>
-              </select>
-            </div>
-          </div>
-          <div class="ujrf-form-group">
-            <label for="address">Адрес доставки*</label>
-            <textarea id="address" rows="3" required></textarea>
-          </div>
-          <div class="ujrf-form-group">
-            <label for="comment">Комментарий к заказу</label>
-            <textarea id="comment" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn-ujrf-primary">Отправить заказ</button>
-        </form>
       </div>
     </div>
   </section>
@@ -487,7 +438,7 @@
                     <h5>Федерация</h5>
                     <ul class="list-unstyled">
                         <li><a href="about.html">О нас</a></li>
-                        <li><a href="team.html">Команда</a></li>
+                        <li><a href="management.html">Руководство</a></li>
                         <li><a href="documents.html">Документы</a></li>
                     </ul>
                 </div>
@@ -522,11 +473,66 @@
         </div>
     </footer>
 
+  <!-- Модальное окно заказа -->
   <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header p-4">
+          <h5 class="modal-title" id="orderModalLabel">Оформить заказ</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body p-4" style="max-height: 70vh; overflow-y: auto;">
+          <p class="text-muted mb-4">Заполните форму, и наш менеджер свяжется с вами для подтверждения заказа</p>
+          <form class="ujrf-order-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Ваше имя*</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Телефон*</label>
+                <input type="tel" class="form-control" id="phone" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="col-md-6">
+                <label for="product" class="form-label">Товар*</label>
+                <select class="form-select" id="product" required>
+                  <option value="">Выберите товар</option>
+                  <option value="double-dutch">Double Dutch (Дабл Датч)</option>
+                  <option value="pvc-training">PVC Training Rope (ПВХ-скакалка)</option>
+                  <option value="digital">Digital Jump Rope (Цифровая скакалка)</option>
+                  <option value="weighted">Weighted Rope (Утяжелённая скакалка)</option>
+                  <option value="freestyle-beaded">Freestyle Beaded Rope (Фристайл скакалка с бусинами)</option>
+                  <option value="speed">Speed Rope (Скоростная скакалка)</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="address" class="form-label">Адрес доставки*</label>
+                <textarea class="form-control" id="address" rows="3" required></textarea>
+              </div>
+              <div class="col-12">
+                <label for="comment" class="form-label">Комментарий к заказу</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-ujrf-primary w-100">Отправить заказ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно подтверждения -->
+  <div class="modal fade" id="orderSuccessModal" tabindex="-1" aria-labelledby="orderSuccessModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header border-0">
-          <h5 class="modal-title w-100 text-center" id="orderModalLabel">Спасибо за заказ!</h5>
+          <h5 class="modal-title w-100 text-center" id="orderSuccessModalLabel">Спасибо за заказ!</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         </div>
         <div class="modal-body text-center">

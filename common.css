@@ -59,6 +59,25 @@ body {
   color: #ffffff;
 }
 
+.btn-ujrf-green {
+  background-color: #005c5a;
+  border-color: #005c5a;
+  color: #ffffff;
+  border: #005c5a 2px solid;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 7px 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ujrf-green:hover {
+  background-color: #005c5b8f;
+  border-color: #005c5b8f;
+  color: #d9d9d9;
+}
+
 .btn-ujrf-secondary {
   background-color: #9c2f2e;
   border-color: #9c2f2e;
