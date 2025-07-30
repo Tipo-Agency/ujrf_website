@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
         
-        this.reset()
+      this.reset()
       } catch (err) {
         alert("Ошибка при отправке. Попробуйте ещё раз или свяжитесь с нами по телефону.")
       }
